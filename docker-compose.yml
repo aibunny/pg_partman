@@ -22,6 +22,7 @@ services:
       -c max_replication_slots=10
       -c hot_standby_feedback=on
       -c wal_log_hints=on
+      -c shared_preload_libraries='pg_partman_bgw'
     volumes:
       - pgdata:/var/lib/postgresql/data #Data Volume
     healthcheck:
