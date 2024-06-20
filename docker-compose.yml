@@ -16,7 +16,7 @@ services:
       - "${MASTER_PORT}:5432"
     command: |
       postgres
-      -c wal_level=replica
+      -c wal_level=logical
       -c hot_standby=on
       -c max_wal_senders=15
       -c max_replication_slots=10
